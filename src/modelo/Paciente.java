@@ -2,20 +2,27 @@ package modelo;
 
 public class Paciente {
 	private String nombre;
-	private int edad;
 	private String identificacion;
-	private String 
-	private int gradoDeCuidado;
-	
-	public Paciente(String nombre, int edad, String identificacion) {
-		this.nombre = nombre;
-		this.edad = edad;
-		this.identificacion = identificacion;
+	private int edad;
+	private String clasificacion;
+	public Paciente() {
+		// TODO Auto-generated constructor stub
 	}
-	public void evaluarEdad() {
-		if(edad>=0&&edad<=15) {
-			
-		}
+	
+	public Paciente(String nombre, String identificacion, int edad, String clasificacion) {
+		this.nombre = nombre;
+		this.identificacion = identificacion;
+		this.edad = edad;
+		this.clasificacion = clasificacion;
+	}
+	public void clasificarPaciente() {
+		if (edad>=0&&edad<=12) {
+			clasificacion="NIÑO";
+		}else if (edad>=13&&edad<=25) {
+			clasificacion="JOVEN";
+		}else if(edad>=25) {
+			clasificacion="ADULTO";
+		} 
 	}
 
 	public String getNombre() {
@@ -24,25 +31,25 @@ public class Paciente {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public int getEdad() {
-		return edad;
-	}
-	public void setEdad(int edad) {
-		this.edad = edad;
-	}
 	public String getIdentificacion() {
 		return identificacion;
 	}
 	public void setIdentificacion(String identificacion) {
 		this.identificacion = identificacion;
 	}
-	public int getGradoDeCuidado() {
-		return gradoDeCuidado;
+	public int getEdad() {
+		return edad;
 	}
-	public void setGradoDeCuidado(int gradoDeCuidado) {
-		this.gradoDeCuidado = gradoDeCuidado;
+	public void setEdad(int edad) {
+		this.edad = edad;
 	}
+	public String getClasificacion() {
+		return clasificacion;
+	}
+	public void setClasificacion(String clasificacion) {
+		this.clasificacion = clasificacion;
+	}
+	
 
-
-
+	
 }
