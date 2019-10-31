@@ -9,12 +9,12 @@ public class Paciente {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Paciente(String nombre, String identificacion, int edad, String clasificacion) {
+	public Paciente(String nombre, String identificacion, int edad) {
 		this.nombre = nombre;
 		this.identificacion = identificacion;
 		this.edad = edad;
-		this.clasificacion = clasificacion;
 	}
+	
 	public void clasificarPaciente() {
 		if (edad>=0&&edad<=12) {
 			clasificacion="NIÑO";
