@@ -220,6 +220,5 @@ public class VentanaEnfermedades extends JFrame {
 	public void setSiguiente(JButton siguiente) {
 		this.siguiente = siguiente;
 	}
-	
 
 }

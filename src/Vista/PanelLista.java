@@ -28,4 +28,20 @@ public class PanelLista extends JPanel {
 
 	}
 
+	public JList<String> getListaVehiculos() {
+		return listaVehiculos;
+	}
+
+	public void setListaVehiculos(JList<String> listaVehiculos) {
+		this.listaVehiculos = listaVehiculos;
+	}
+
+	public DefaultListModel<String> getModeloLista() {
+		return modeloLista;
+	}
+
+	public void setModeloLista(DefaultListModel<String> modeloLista) {
+		this.modeloLista = modeloLista;
+	}
+
 }

@@ -17,9 +17,6 @@ public class VentanaHistorial extends JFrame {
 	PanelBotones pb;
 	PanelLista pl;
 
-	JList<String> listaVehiculos;
-	DefaultListModel<String> modeloLista;
-
 	public VentanaHistorial() {
 		setIconImage(new ImageIcon(getClass().getResource("/Imagenes/LogoClinica.png")).getImage());
 		setTitle("HISTORIAL PACIENTES");
@@ -29,10 +26,10 @@ public class VentanaHistorial extends JFrame {
 		getContentPane().setBackground(Color.white);
 		setBounds(0, 0, 710, 640);
 		setLocationRelativeTo(null);
-		
-		pb= new PanelBotones();
-		pl= new PanelLista();
-		
+
+		pb = new PanelBotones();
+		pl = new PanelLista();
+
 		pl.setBackground(Color.white);
 		add(pl).setBounds(10, 10, 420, 600);
 		pb.setBackground(Color.white);
@@ -40,6 +37,22 @@ public class VentanaHistorial extends JFrame {
 
 		setVisible(false);
 
+	}
+
+	public PanelBotones getPb() {
+		return pb;
+	}
+
+	public void setPb(PanelBotones pb) {
+		this.pb = pb;
+	}
+
+	public PanelLista getPl() {
+		return pl;
+	}
+
+	public void setPl(PanelLista pl) {
+		this.pl = pl;
 	}
 
 }

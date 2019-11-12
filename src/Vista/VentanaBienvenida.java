@@ -8,7 +8,9 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class VentanaBienvenida extends JFrame implements ActionListener {
+import controlador.Controlador;
+
+public class VentanaBienvenida extends JFrame {
 
 	PanelTitulo pt;
 	VentanaHistorial vh;
@@ -16,7 +18,8 @@ public class VentanaBienvenida extends JFrame implements ActionListener {
 	VentanaEnfermedades ve;
 	VentanaNeuroCognitivo vnc;
 
-	public VentanaBienvenida() {
+	public VentanaBienvenida(Controlador c) {
+
 		setIconImage(new ImageIcon(getClass().getResource("/Imagenes/LogoClinica.png")).getImage());
 		setTitle("CLINIC UEB");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -36,30 +39,55 @@ public class VentanaBienvenida extends JFrame implements ActionListener {
 
 		pt.setBackground(Color.white);
 		setVisible(true);
+		
 
-		pt.getHistorial().addActionListener(this);
-		pt.getNuevopaciente().addActionListener(this);
-		vr.getRegistrar().addActionListener(this);
-		ve.getSiguiente().addActionListener(this);
-		ve.enfermedad1_si.addActionListener(this);
-		ve.enfermedad1_no.addActionListener(this);
+		pt.getHistorial().addActionListener(c);
+		vh.pb.buscar.addActionListener(c);
+		pt.getNuevopaciente().addActionListener(c);
+		vr.getRegistrar().addActionListener(c);
+		ve.getSiguiente().addActionListener(c);
+		ve.enfermedad1_si.addActionListener(c);
+		ve.enfermedad1_no.addActionListener(c);
 	}
 
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		if (e.getActionCommand().equals("historial")) {
-			vh.setVisible(true);
-		} else if (e.getActionCommand().equals("nuevopaciente")) {
-			vr.setVisible(true);
-		} else if (e.getActionCommand().equals("registrar")) {
-			vr.setVisible(false);
-			ve.setVisible(true);
-		} else if (e.getActionCommand().equals("siguiente")) {
-			if (ve.getEnfermedad1_si().isSelected() == true) {
-				vnc.setVisible(true);
-				ve.setVisible(false);
-			}
-		}
+	public PanelTitulo getPt() {
+		return pt;
+	}
+
+	public void setPt(PanelTitulo pt) {
+		this.pt = pt;
+	}
+
+	public VentanaHistorial getVh() {
+		return vh;
+	}
+
+	public void setVh(VentanaHistorial vh) {
+		this.vh = vh;
+	}
+
+	public VentanaRegistro getVr() {
+		return vr;
+	}
+
+	public void setVr(VentanaRegistro vr) {
+		this.vr = vr;
+	}
+
+	public VentanaEnfermedades getVe() {
+		return ve;
+	}
+
+	public void setVe(VentanaEnfermedades ve) {
+		this.ve = ve;
+	}
+
+	public VentanaNeuroCognitivo getVnc() {
+		return vnc;
+	}
+
+	public void setVnc(VentanaNeuroCognitivo vnc) {
+		this.vnc = vnc;
 	}
 
 }
