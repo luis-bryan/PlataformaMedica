@@ -1,6 +1,7 @@
 package Controlador;
 
 import Vista.VentanaBienvenida;
+import Vista.VentanaHistorial;
 
 public class Lanzador {
 
