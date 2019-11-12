@@ -7,10 +7,38 @@ public class Cuidados {
 	private boolean enfermedad1,enfermedad2,enfermedad3;
 	
 	public Cuidados() {
-		// TODO Auto-generated constructor stub
+		matrizNino[0][0] = "1. Supervision las 24 Horas del dia \n 2. Controles con un medico especialista \n 3. Realizar actividades simples como  lecturas";
+		matrizNino[0][1] = "1. Supervision las 24 Horas del dia \n 2. Controles con un medico especialista \n 3. Realizar actividades simples como  lecturas \n 4. Toma de medicamentos de manera periodica, estos son recomendados por el medico";
+		matrizNino[0][2] = "1. Supervision las 24 Horas del dia \n 2. Controles con un medico especialista \n 3. Realizar actividades simples como  lecturas \n 4. Toma de medicamentos de manera periodica, estos son recomendados por el medico";
+		matrizNino[1][0] = "1. Supervision las 24 Horas del dia \n 2. Controles con un medico especialista \n 3. Realizar actividades simples como  lecturas \n 4. Toma de medicamentos de manera periodica, estos son recomendados por el medico";
+		matrizNino[1][1] = "1. Supervision las 24 Horas del dia \n 2. Controles con un medico especialista \n 3. Realizar actividades simples como  lecturas \n 4. Toma de medicamentos de manera periodica, estos son recomendados por el medico";
+		matrizNino[1][2] = "1. Supervision las 24 Horas del dia \n 2. Controles con un medico especialista \n 3. Realizar actividades simples como  lecturas \n 4. Toma de medicamentos de manera periodica, estos son recomendados por el medico";
+		matrizNino[2][0] = "1. Supervision las 24 Horas del dia \n 2. Controles con un medico especialista \n 3. Realizar actividades simples como  lecturas \n 4. Toma de medicamentos de manera periodica, estos son recomendados por el medico";
+		matrizNino[2][1] = "1. Supervision las 24 Horas del dia \n 2. Controles con un medico especialista \n 3. Realizar actividades simples como  lecturas \n 4. Toma de medicamentos de manera periodica, estos son recomendados por el medico \n 5. Ayuda en hacer actividades simples";
+		matrizNino[2][2] = "1. Supervision las 24 Horas del dia \n 2. Controles con un medico especialista \n 3. Realizar actividades simples como  lecturas \n 4. Toma de medicamentos de manera periodica, estos son recomendados por el medico \n 5. Ayuda en hacer actividades simples";
+		
+		matrizJoven[0][0] = "1. Supervision las 24 Horas del dia \n 2. Controles con un medico especialista \n 3. Realizar actividades simples como  lecturas";
+		matrizJoven[0][1] = "1. Supervision las 24 Horas del dia \n 2. Controles con un medico especialista \n 3. Realizar actividades simples como  lecturas";
+		matrizJoven[1][0] = "1. Supervision las 24 Horas del dia \n 2. Controles con un medico especialista \n 3. Realizar actividades simples como  lecturas";
+		matrizJoven[0][2] = "1. Supervision las 24 Horas del dia \n 2. Controles con un medico especialista \n 3. Realizar actividades simples como  lecturas \n 4. Toma de medicamentos de manera periodica, estos son recomendados por el medico";
+		matrizJoven[1][1] = "1. Supervision las 24 Horas del dia \n 2. Controles con un medico especialista \n 3. Realizar actividades simples como  lecturas \n 4. Toma de medicamentos de manera periodica, estos son recomendados por el medico";
+		matrizJoven[1][2] = "1. Supervision las 24 Horas del dia \n 2. Controles con un medico especialista \n 3. Realizar actividades simples como  lecturas \n 4. Toma de medicamentos de manera periodica, estos son recomendados por el medico";
+		matrizJoven[2][0] = "1. Supervision las 24 Horas del dia \n 2. Controles con un medico especialista \n 3. Realizar actividades simples como  lecturas \n 4. Toma de medicamentos de manera periodica, estos son recomendados por el medico";
+		matrizJoven[2][1] = "1. Supervision las 24 Horas del dia \n 2. Controles con un medico especialista \n 3. Realizar actividades simples como  lecturas \n 4. Toma de medicamentos de manera periodica, estos son recomendados por el medico";
+		matrizJoven[2][2] = "1. Supervision las 24 Horas del dia \n 2. Controles con un medico especialista \n 3. Realizar actividades simples como  lecturas \n 4. Toma de medicamentos de manera periodica, estos son recomendados por el medico \n 5. Ayuda en hacer actividades simples";
+
+		matrizAdulto[0][0] = "1. Supervision las 24 Horas del dia \n 2. Controles con un medico especialista \n 3. Realizar actividades simples como  lecturas";
+		matrizAdulto[0][1] = "1. Supervision las 24 Horas del dia \n 2. Controles con un medico especialista \n 3. Realizar actividades simples como  lecturas \n 4. Toma de medicamentos de manera periodica, estos son recomendados por el medico";
+		matrizAdulto[0][2] = "1. Supervision las 24 Horas del dia \n 2. Controles con un medico especialista \n 3. Realizar actividades simples como  lecturas \n 4. Toma de medicamentos de manera periodica, estos son recomendados por el medico";
+		matrizAdulto[1][0] = "1. Supervision las 24 Horas del dia \n 2. Controles con un medico especialista \n 3. Realizar actividades simples como  lecturas \n 4. Toma de medicamentos de manera periodica, estos son recomendados por el medico";
+		matrizAdulto[1][1] = "1. Supervision las 24 Horas del dia \n 2. Controles con un medico especialista \n 3. Realizar actividades simples como  lecturas \n 4. Toma de medicamentos de manera periodica, estos son recomendados por el medico \n 5. Ayuda en hacer actividades simples";
+		matrizAdulto[1][2] = "1. Supervision las 24 Horas del dia \n 2. Controles con un medico especialista \n 3. Realizar actividades simples como  lecturas \n 4. Toma de medicamentos de manera periodica, estos son recomendados por el medico \n 5. Ayuda en hacer actividades simples";
+		matrizAdulto[2][0] = "1. Supervision las 24 Horas del dia \n 2. Controles con un medico especialista \n 3. Realizar actividades simples como  lecturas \n 4. Toma de medicamentos de manera periodica, estos son recomendados por el medico \n 5. Ayuda en hacer actividades simples";
+		matrizAdulto[2][1] = "1. Supervision las 24 Horas del dia \n 2. Controles con un medico especialista \n 3. Realizar actividades simples como  lecturas \n 4. Toma de medicamentos de manera periodica, estos son recomendados por el medico \n 5. Ayuda en hacer actividades simples";
+		matrizAdulto[2][2] = "1. Supervision las 24 Horas del dia \n 2. Controles con un medico especialista \n 3. Realizar actividades simples como  lecturas \n 4. Toma de medicamentos de manera periodica, estos son recomendados por el medico \n 5. Ayuda en hacer actividades simples";
 	}
 
-	public String clasificarMatrizNOCOCHINO(String aux) {
+	public String clasificarMatriz(String aux) {
 		int x = 0;
 		int y = 0;
 		if(aux.equals("JOVEN")) {
