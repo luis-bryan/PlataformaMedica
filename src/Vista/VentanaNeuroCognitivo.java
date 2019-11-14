@@ -35,7 +35,7 @@ public class VentanaNeuroCognitivo extends JFrame {
 				+ "<br><br> TENIENDO EN CUENTA LOS SIGUIENTES VALORES:" + "<br>1 = NUNCA" + "<br>2 = BAJA"
 				+ "<br>3 = MODERADO" + "<br>4 = MEDIO" + "<br>5 = ALTO</body></html>");
 		deficitaprendizaje = new JLabel("NIVEL DEFICIT DE APRENDIZAJE:");
-		deficitatencion = new JLabel("NIVEL DE DEFICIT DE ATENCIÓN:");
+		deficitatencion = new JLabel("NIVEL DE DEFICIT DE ATENCIï¿½N:");
 		imperactividad = new JLabel("NIVEL DE IMPERACTIVIDAD:");
 		valores_evaluoDeficitAprendizaje = new JComboBox<String>();
 		valores_evaluoDeficitAprendizaje.addItem("1");
@@ -62,6 +62,8 @@ public class VentanaNeuroCognitivo extends JFrame {
 		siguiente = new JButton("SIGUIENTE");
 		siguiente.setActionCommand("siguientefinalnc");
 
+		siguiente.setActionCommand("siguienteNC");
+
 		add(enunciado).setBounds(10, 10, 600, 150);
 		add(deficitaprendizaje).setBounds(40, 165, 200, 80);
 		add(valores_evaluoDeficitAprendizaje).setBounds(280, 190, 100, 30);
@@ -75,4 +77,77 @@ public class VentanaNeuroCognitivo extends JFrame {
 		setVisible(false);
 
 	}
+
+	public ImageIcon getFondoimagen() {
+		return fondoimagen;
+	}
+
+	public void setFondoimagen(ImageIcon fondoimagen) {
+		this.fondoimagen = fondoimagen;
+	}
+
+	public JLabel getEnunciado() {
+		return enunciado;
+	}
+
+	public void setEnunciado(JLabel enunciado) {
+		this.enunciado = enunciado;
+	}
+
+	public JLabel getDeficitaprendizaje() {
+		return deficitaprendizaje;
+	}
+
+	public void setDeficitaprendizaje(JLabel deficitaprendizaje) {
+		this.deficitaprendizaje = deficitaprendizaje;
+	}
+
+	public JLabel getImperactividad() {
+		return imperactividad;
+	}
+
+	public void setImperactividad(JLabel imperactividad) {
+		this.imperactividad = imperactividad;
+	}
+
+	public JLabel getDeficitatencion() {
+		return deficitatencion;
+	}
+
+	public void setDeficitatencion(JLabel deficitatencion) {
+		this.deficitatencion = deficitatencion;
+	}
+
+	public JComboBox<String> getValores_evaluoDeficitAprendizaje() {
+		return valores_evaluoDeficitAprendizaje;
+	}
+
+	public void setValores_evaluoDeficitAprendizaje(JComboBox<String> valores_evaluoDeficitAprendizaje) {
+		this.valores_evaluoDeficitAprendizaje = valores_evaluoDeficitAprendizaje;
+	}
+
+	public JComboBox<String> getValores_evaluoImperactividad() {
+		return valores_evaluoImperactividad;
+	}
+
+	public void setValores_evaluoImperactividad(JComboBox<String> valores_evaluoImperactividad) {
+		this.valores_evaluoImperactividad = valores_evaluoImperactividad;
+	}
+
+	public JComboBox<String> getValores_evaluoDeficitAtencion() {
+		return valores_evaluoDeficitAtencion;
+	}
+
+	public void setValores_evaluoDeficitAtencion(JComboBox<String> valores_evaluoDeficitAtencion) {
+		this.valores_evaluoDeficitAtencion = valores_evaluoDeficitAtencion;
+	}
+
+	public JButton getSiguiente() {
+		return siguiente;
+	}
+
+	public void setSiguiente(JButton siguiente) {
+		this.siguiente = siguiente;
+	}
+
 }

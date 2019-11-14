@@ -43,7 +43,9 @@ public class VentanaBienvenida extends JFrame {
 		setVisible(true);
 
 		pt.getHistorial().addActionListener(c);
+		vnd.siguiente.addActionListener(c);
 		vh.pb.buscar.addActionListener(c);
+		vnc.siguiente.addActionListener(c);
 		pt.getNuevopaciente().addActionListener(c);
 		vr.getRegistrar().addActionListener(c);
 		ve.getSiguiente().addActionListener(c);
@@ -55,6 +57,17 @@ public class VentanaBienvenida extends JFrame {
 		ve.enfermedad3_no.addActionListener(c);
 
 	}
+	
+
+	public VentanaNeuroDesarrollo getVnd() {
+		return vnd;
+	}
+
+
+	public void setVnd(VentanaNeuroDesarrollo vnd) {
+		this.vnd = vnd;
+	}
+
 
 	public PanelTitulo getPt() {
 		return pt;
