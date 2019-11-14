@@ -46,6 +46,7 @@ public class VentanaBienvenida extends JFrame {
 		pt.getHistorial().addActionListener(c);
 		vnd.siguiente.addActionListener(c);
 		vh.pb.buscar.addActionListener(c);
+		vh.pb.eliminar.addActionListener(c);
 		vnc.siguiente.addActionListener(c);
 		pt.getNuevopaciente().addActionListener(c);
 		vr.getRegistrar().addActionListener(c);

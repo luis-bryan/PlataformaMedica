@@ -3,7 +3,6 @@ package controlador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
-
 import Vista.VentanaBienvenida;
 import modelo.Mundo;
 import modelo.Paciente;
@@ -37,6 +36,15 @@ public class Controlador implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		if (e.getActionCommand().equals("historial")) {
 			vb.getVh().setVisible(true);
+		} else if (e.getActionCommand().equals("eliminar")) {
+			String aux = vb.getVh().getPl().getListaVehiculos().getSelectedValue().toString();
+			int opcion = JOptionPane.showOptionDialog(null, "¿Deseas eliminar al paciente?", "Eliminar", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
+			if(opcion == JOptionPane.YES_OPTION)
+			{
+				m.eliminar(aux);
+				vb.getVh().getPl().getModeloLista().removeElement(aux);
+				vb.getVh().getPl().getListaVehiculos().setModel(vb.getVh().getPl().getModeloLista());
+			}
 		} else if (e.getActionCommand().equals("nuevopaciente")) {
 			vb.getVr().getNombre_().setText("");
 			vb.getVr().getIdentificacion_().setText("");
@@ -51,13 +59,16 @@ public class Controlador implements ActionListener {
 				JOptionPane.showMessageDialog(null, "Ingrese Todos los datos");
 				
 			}else {
-				
-				m.agregar(vb.getVr().getNombre_().getText(), Integer.parseInt(vb.getVr().getEdad_().getText()),
-						vb.getVr().getIdentificacion_().getText(), vb.getVr().getGenero_().getSelectedItem().toString(),m.getPa().clasificarPaciente());
-				vb.getVh().getPl().getModeloLista().addElement(vb.getVr().getNombre_().getText());
-
-				vb.getVr().setVisible(false);
-				vb.getVe().setVisible(true);
+				try {
+					m.agregar(vb.getVr().getNombre_().getText(), Integer.parseInt(vb.getVr().getEdad_().getText()),
+							vb.getVr().getIdentificacion_().getText(), vb.getVr().getGenero_().getSelectedItem().toString(),m.getPa().clasificarPaciente());
+					vb.getVh().getPl().getModeloLista().addElement(vb.getVr().getNombre_().getText());
+					vb.getVr().setVisible(false);
+					vb.getVe().setVisible(true);
+					
+				} catch (NumberFormatException e2) {
+					JOptionPane.showMessageDialog(null, "INGRESE CORRECTAMENTE LOS DATOS");
+				}
 			}
 
 		} else if (e.getActionCommand().equals("siguiente")) {
@@ -89,7 +100,11 @@ public class Controlador implements ActionListener {
 			}
 			
 		}else if(e.getActionCommand().equals("buscar")) {
-			JOptionPane.showMessageDialog(null, (m.buscar(JOptionPane.showInputDialog("Digite cedula del paciente")).toString()));
+			try {
+				JOptionPane.showMessageDialog(null, (m.buscar(JOptionPane.showInputDialog("Digite cedula del paciente")).toString()));
+			} catch (Exception e2) {
+				JOptionPane.showMessageDialog(null, "PACIENTE NO ENCONTRADO");
+			}
 
 		}else if(e.getActionCommand().equals("siguienteNC")) {
 			m.getPa(); 
@@ -112,4 +127,7 @@ public class Controlador implements ActionListener {
 			JOptionPane.showMessageDialog(null, p1.getCuidados());
 		}
 	}
+
+	
+	
 }
