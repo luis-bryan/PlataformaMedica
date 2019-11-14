@@ -7,10 +7,12 @@ import javax.swing.JComboBox;
 public class Mundo {
 
 	private Paciente pa;
+	private Cuidados cu;
 	private ArrayList<Paciente> pacientes;
 
 	public Mundo() {
 		pa = new Paciente();
+		cu = new Cuidados();
 		pacientes = new ArrayList<Paciente>();
 	}
 
@@ -47,6 +49,15 @@ public class Mundo {
 			r = r + pacientes.toString() + "\n";
 		}
 		return r;
+	}
+	
+
+	public Cuidados getCu() {
+		return cu;
+	}
+
+	public void setCu(Cuidados cu) {
+		this.cu = cu;
 	}
 
 	public Paciente getPa() {

@@ -8,9 +8,65 @@ public class Paciente {
 	private int edad;
 	private String genero;
 	private String clasificacion;
+	private boolean enfermedad1;
+	private boolean enfermedad2;
+	private boolean enfermedad3;
+	private String cuidados;
+	private int sumaNC;
+	private int sumaND;
+
+
+	public int getSumaNC() {
+		return sumaNC;
+	}
+
+	public void setSumaNC(int sumaNC) {
+		this.sumaNC = sumaNC;
+	}
+
+	public int getSumaND() {
+		return sumaND;
+	}
+
+	public void setSumaND(int sumaND) {
+		this.sumaND = sumaND;
+	}
+
+	public String getCuidados() {
+		return cuidados;
+	}
+
+	public void setCuidados(String cuidados) {
+		this.cuidados = cuidados;
+	}
+
+	public boolean isEnfermedad1() {
+		return enfermedad1;
+	}
+
+	public void setEnfermedad1(boolean enfermedad1) {
+		this.enfermedad1 = enfermedad1;
+	}
+
+	public boolean isEnfermedad2() {
+		return enfermedad2;
+	}
+
+	public void setEnfermedad2(boolean enfermedad2) {
+		this.enfermedad2 = enfermedad2;
+	}
+
+	public boolean isEnfermedad3() {
+		return enfermedad3;
+	}
+
+	public void setEnfermedad3(boolean enfermedad3) {
+		this.enfermedad3 = enfermedad3;
+	}
 
 	public Paciente() {
-		// TODO Auto-generated constructor stub
+		sumaNC = 0;
+		sumaNC = 0;
 	}
 
 	public Paciente(String nombre, String identificacion, int edad, String  genero,String clasificacion) {
@@ -24,7 +80,7 @@ public class Paciente {
 
 	public String clasificarPaciente() {
 		if (edad >= 0 && edad <= 12) {
-			clasificacion = "NIÑO";
+			clasificacion = "NIÃ‘O";
 		} else if (edad >= 13 && edad <= 25) {
 			clasificacion = "JOVEN";
 		} else if (edad >= 25) {
@@ -75,7 +131,7 @@ public class Paciente {
 
 	@Override
 	public String toString() {
-		return "Paciente\n" + "Nombre= " + nombre + "\nIdentificacion= " + identificacion + "\nEdad= " + edad
-				+ "\n Genero= " + genero + "\nClasificacion=" + clasificacion;
+		return "PACIENTE\n" + "Nombre= " + nombre + "\nIdentificacion= " + identificacion + "\nEdad= " + edad
+				+ "\nGenero= " + genero + "\nClasificacion=" + clasificacion+"\n.:Cuidados:."+"\n"+cuidados;
 	}
 }

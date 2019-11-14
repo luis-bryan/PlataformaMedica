@@ -9,7 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
-public class VentanaNeuroCognitivo extends JFrame {
+public class VentanaNeuroDesarrollo extends JFrame {
 	ImageIcon fondoimagen;
 	JLabel enunciado;
 	JLabel deficitaprendizaje;
@@ -20,9 +20,9 @@ public class VentanaNeuroCognitivo extends JFrame {
 	JComboBox<String> valores_evaluoDeficitAtencion;
 	JButton siguiente;
 
-	public VentanaNeuroCognitivo() {
+	 public VentanaNeuroDesarrollo() {
 		setIconImage(new ImageIcon(getClass().getResource("/Imagenes/LogoClinica.png")).getImage());
-		setTitle("SINTOMAS NEUROCOGNITIVOS");
+		setTitle("SINTOMAS NERODESARROLLOS");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		getContentPane().setLayout(null);
 		setResizable(false);
@@ -60,7 +60,7 @@ public class VentanaNeuroCognitivo extends JFrame {
 		((JLabel) valores_evaluoImperactividad.getRenderer()).setHorizontalAlignment(SwingConstants.CENTER);
 
 		siguiente = new JButton("SIGUIENTE");
-		siguiente.setActionCommand("siguienteNC");
+		siguiente.setActionCommand("siguienteND");
 
 		add(enunciado).setBounds(10, 10, 600, 150);
 		add(deficitaprendizaje).setBounds(40, 165, 200, 80);
@@ -147,5 +147,6 @@ public class VentanaNeuroCognitivo extends JFrame {
 	public void setSiguiente(JButton siguiente) {
 		this.siguiente = siguiente;
 	}
-	
+
+
 }
