@@ -18,6 +18,8 @@ public class VentanaBienvenida extends JFrame {
 	VentanaEnfermedades ve;
 	VentanaNeuroCognitivo vnc;
 	VentanaNeuroDesarrollo vnd;
+	VentanaEsquizofrenia vez;
+	
 
 	public VentanaBienvenida(Controlador c) {
 
@@ -36,6 +38,7 @@ public class VentanaBienvenida extends JFrame {
 		ve = new VentanaEnfermedades();
 		vnc = new VentanaNeuroCognitivo();
 		vnd = new VentanaNeuroDesarrollo();
+		vez = new VentanaEsquizofrenia();
 
 		getContentPane().add(pt).setBounds(4, 1, 710, 630);
 
@@ -57,17 +60,14 @@ public class VentanaBienvenida extends JFrame {
 		ve.enfermedad3_no.addActionListener(c);
 
 	}
-	
 
 	public VentanaNeuroDesarrollo getVnd() {
 		return vnd;
 	}
 
-
 	public void setVnd(VentanaNeuroDesarrollo vnd) {
 		this.vnd = vnd;
 	}
-
 
 	public PanelTitulo getPt() {
 		return pt;
@@ -105,16 +105,16 @@ public class VentanaBienvenida extends JFrame {
 		return vnc;
 	}
 
-	public VentanaNeuroDesarrollo getVnd() {
-		return vnd;
-	}
-
-	public void setVnd(VentanaNeuroDesarrollo vnd) {
-		this.vnd = vnd;
-	}
-
 	public void setVnc(VentanaNeuroCognitivo vnc) {
 		this.vnc = vnc;
+	}
+
+	public VentanaEsquizofrenia getVez() {
+		return vez;
+	}
+
+	public void setVez(VentanaEsquizofrenia vez) {
+		this.vez = vez;
 	}
 
 }

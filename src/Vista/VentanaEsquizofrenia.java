@@ -9,7 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
-public class VentanaAlzheimer extends JFrame {
+public class VentanaEsquizofrenia extends JFrame {
 	ImageIcon fondoimagen;
 	JLabel enunciado;
 	JLabel deficitaprendizaje;
@@ -20,9 +20,10 @@ public class VentanaAlzheimer extends JFrame {
 	JComboBox<String> valores_evaluoDeficitAtencion;
 	JButton siguiente;
 
-	public VentanaAlzheimer() {
+	public VentanaEsquizofrenia() {
+
 		setIconImage(new ImageIcon(getClass().getResource("/Imagenes/LogoClinica.png")).getImage());
-		setTitle("SINTOMAS ALZHEIMER");
+		setTitle("SINTOMAS ESQUIZOFRENIA");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		getContentPane().setLayout(null);
 		setResizable(false);
@@ -34,9 +35,9 @@ public class VentanaAlzheimer extends JFrame {
 		enunciado = new JLabel("<html><body>.: SELECCIONE LA GRAVEDAD CON LA QUE EL PACIENTE PRESENTA ESTOS SINTOMAS:."
 				+ "<br><br> TENIENDO EN CUENTA LOS SIGUIENTES VALORES:" + "<br>1 = NUNCA" + "<br>2 = BAJA"
 				+ "<br>3 = MODERADO" + "<br>4 = MEDIO" + "<br>5 = ALTO</body></html>");
-		deficitaprendizaje = new JLabel("NIVEL DEFICIT DE APRENDIZAJE:");
-		deficitatencion = new JLabel("NIVEL DE DEFICIT DE ATENCIÓN:");
-		imperactividad = new JLabel("NIVEL DE IMPERACTIVIDAD:");
+		deficitaprendizaje = new JLabel("DELIRIOS:");
+		deficitatencion = new JLabel("ALUCINACIONES:");
+		imperactividad = new JLabel("PENSAMIENTOS Y HABLA DESORGANIZADA:");
 		valores_evaluoDeficitAprendizaje = new JComboBox<String>();
 		valores_evaluoDeficitAprendizaje.addItem("1");
 		valores_evaluoDeficitAprendizaje.addItem("2");
