@@ -17,6 +17,7 @@ public class VentanaBienvenida extends JFrame {
 	VentanaRegistro vr;
 	VentanaEnfermedades ve;
 	VentanaNeuroCognitivo vnc;
+	VentanaNeuroDesarrollo vnd;
 
 	public VentanaBienvenida(Controlador c) {
 
@@ -34,12 +35,12 @@ public class VentanaBienvenida extends JFrame {
 		vr = new VentanaRegistro();
 		ve = new VentanaEnfermedades();
 		vnc = new VentanaNeuroCognitivo();
+		vnd = new VentanaNeuroDesarrollo();
 
 		getContentPane().add(pt).setBounds(4, 1, 710, 630);
 
 		pt.setBackground(Color.white);
 		setVisible(true);
-		
 
 		pt.getHistorial().addActionListener(c);
 		vh.pb.buscar.addActionListener(c);
@@ -48,6 +49,11 @@ public class VentanaBienvenida extends JFrame {
 		ve.getSiguiente().addActionListener(c);
 		ve.enfermedad1_si.addActionListener(c);
 		ve.enfermedad1_no.addActionListener(c);
+		ve.enfermedad1_si.addActionListener(c);
+		ve.enfermedad2_no.addActionListener(c);
+		ve.enfermedad3_si.addActionListener(c);
+		ve.enfermedad3_no.addActionListener(c);
+
 	}
 
 	public PanelTitulo getPt() {
@@ -84,6 +90,14 @@ public class VentanaBienvenida extends JFrame {
 
 	public VentanaNeuroCognitivo getVnc() {
 		return vnc;
+	}
+
+	public VentanaNeuroDesarrollo getVnd() {
+		return vnd;
+	}
+
+	public void setVnd(VentanaNeuroDesarrollo vnd) {
+		this.vnd = vnd;
 	}
 
 	public void setVnc(VentanaNeuroCognitivo vnc) {

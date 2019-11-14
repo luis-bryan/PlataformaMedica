@@ -60,7 +60,7 @@ public class VentanaNeuroCognitivo extends JFrame {
 		((JLabel) valores_evaluoImperactividad.getRenderer()).setHorizontalAlignment(SwingConstants.CENTER);
 
 		siguiente = new JButton("SIGUIENTE");
-		siguiente.setActionCommand("siguientefinal");
+		siguiente.setActionCommand("siguientefinalnc");
 
 		add(enunciado).setBounds(10, 10, 600, 150);
 		add(deficitaprendizaje).setBounds(40, 165, 200, 80);
