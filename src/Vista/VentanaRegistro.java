@@ -1,15 +1,19 @@
 package Vista;
 
 import java.awt.Color;
+import java.awt.Event;
+import java.text.NumberFormat;
 
 import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JTextField;
+import javax.swing.text.NumberFormatter;
 
 public class VentanaRegistro extends JFrame {
 	JButton registrar;
@@ -17,9 +21,9 @@ public class VentanaRegistro extends JFrame {
 	JLabel nombre;
 	JTextField nombre_;
 	JLabel identificacion;
-	JTextField identificacion_;
+	JFormattedTextField identificacion_;
 	JLabel edad;
-	JTextField edad_;
+	JFormattedTextField edad_;
 	JLabel genero;
 	JComboBox<String> genero_;
 
@@ -32,14 +36,22 @@ public class VentanaRegistro extends JFrame {
 		getContentPane().setBackground(Color.white);
 		setBounds(0, 0, 400, 350);
 		setLocationRelativeTo(null);
+		NumberFormat format = NumberFormat.getInstance();
+		NumberFormatter formatter= new NumberFormatter(format);
+		formatter.setValueClass(Integer.class);
+		formatter.setMinimum(0);
+		formatter.setMaximum(Integer.MAX_VALUE);
+		formatter.setAllowsInvalid(false);
+		formatter.setCommitsOnValidEdit(false);
 		fondoimagen = new ImageIcon(getClass().getResource("/Imagenes/fondo.png"));
 		JLabel fondo = new JLabel(fondoimagen);
 		nombre = new JLabel("NOMBRE PACIENTE:");
 		identificacion = new JLabel("IDENTIFICACIÓN PACIENTE:");
 		edad = new JLabel("EDAD PACIENTE:");
 		nombre_ = new JTextField(100);
-		identificacion_ = new JTextField(100);
-		edad_ = new JTextField(100);
+		nombre_.setText(nombre_.getText().toUpperCase());
+		identificacion_ = new JFormattedTextField(formatter);
+		edad_ = new JFormattedTextField(formatter);
 		genero = new JLabel("GENERO PACIENTE:");
 		genero_ = new JComboBox<String>();
 		registrar = new JButton("REGISTRAR PACIENTE");
@@ -107,7 +119,7 @@ public class VentanaRegistro extends JFrame {
 		return identificacion_;
 	}
 
-	public void setIdentificacion_(JTextField identificacion_) {
+	public void setIdentificacion_(JFormattedTextField identificacion_) {
 		this.identificacion_ = identificacion_;
 	}
 
@@ -123,7 +135,7 @@ public class VentanaRegistro extends JFrame {
 		return edad_;
 	}
 
-	public void setEdad_(JTextField edad_) {
+	public void setEdad_(JFormattedTextField edad_) {
 		this.edad_ = edad_;
 	}
 
